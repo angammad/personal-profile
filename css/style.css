@@ -1,0 +1,78 @@
+nav {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+nav a {
+
+    color: #2c3e50;
+
+    text-decoration: none;
+
+    margin: 0 12px;
+
+    font-weight: 500;
+
+}
+
+
+nav a:hover {
+
+    color: #4a90e2;
+
+}
+
+
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+
+input {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d0e1fd;
+
+    font-family: inherit;
+
+}
+
+
+
+button {
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #4a90e2;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+
+button:hover {
+
+    background-color: #2a6cb8;
+
+}
