@@ -1,29 +1,64 @@
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("DOMContentLoaded",()=>{
 
 
-console.log(
-"Althea Personal Profile Loaded"
+const form=document.getElementById("messageForm");
+
+
+
+if(form){
+
+
+form.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+
+let data={
+
+name:
+document.getElementById("name").value,
+
+
+email:
+document.getElementById("email").value,
+
+
+message:
+document.getElementById("message").value
+
+
+};
+
+
+
+let messages=
+JSON.parse(localStorage.getItem("messages")) || [];
+
+
+
+messages.push(data);
+
+
+
+localStorage.setItem(
+"messages",
+JSON.stringify(messages)
 );
 
 
 
-const footer =
-document.getElementById(
-"footer-text"
+alert(
+"Thank you! Your message has been sent successfully."
 );
 
 
 
-if(footer){
+form.reset();
 
 
-footer.innerHTML =
-
-`Contact: angmmd@gmail.com |
-© ${new Date().getFullYear()}
-Thea's Profile - All Rights Reserved.`;
+});
 
 
 }
